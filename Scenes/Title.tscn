@@ -1,0 +1,60 @@
+[gd_scene load_steps=9 format=2]
+
+[ext_resource path="res://Scripts/Play.gd" type="Script" id=1]
+[ext_resource path="res://Fonts/BADABB__.TTF" type="DynamicFontData" id=2]
+[ext_resource path="res://Sprites/Play_button.png" type="Texture" id=3]
+[ext_resource path="res://Sprites/Title.png" type="Texture" id=4]
+[ext_resource path="res://Sprites/Instructions_button.png" type="Texture" id=5]
+[ext_resource path="res://Music/Music_Changer.gd" type="Script" id=6]
+[ext_resource path="res://Sprites/Music_On.png" type="Texture" id=7]
+
+[sub_resource type="DynamicFont" id=1]
+size = 70
+font_data = ExtResource( 2 )
+
+[node name="Panel" type="Panel"]
+margin_right = 1024.0
+margin_bottom = 600.0
+script = ExtResource( 1 )
+
+[node name="Sprite" type="Sprite" parent="."]
+position = Vector2( 512, 300 )
+texture = ExtResource( 4 )
+
+[node name="Label" type="Label" parent="."]
+modulate = Color( 0, 0, 0, 1 )
+margin_left = 300.0
+margin_top = 32.0
+margin_right = 992.0
+margin_bottom = 154.0
+custom_fonts/font = SubResource( 1 )
+text = "Office Madness"
+align = 1
+valign = 1
+
+[node name="Play" type="Button" parent="."]
+margin_left = 30.0
+margin_top = 242.0
+margin_right = 267.0
+margin_bottom = 348.0
+icon = ExtResource( 3 )
+flat = true
+
+[node name="Instructions" type="Button" parent="."]
+margin_left = 28.0
+margin_top = 361.0
+margin_right = 265.0
+margin_bottom = 467.0
+icon = ExtResource( 5 )
+flat = true
+
+[node name="Title" type="AudioStreamPlayer" parent="."]
+script = ExtResource( 6 )
+
+[node name="Mute" type="Button" parent="."]
+margin_left = 108.0
+margin_top = 44.0
+margin_right = 187.0
+margin_bottom = 117.0
+icon = ExtResource( 7 )
+flat = true

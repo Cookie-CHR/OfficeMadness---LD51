@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/Deuces.mp3-1a203578a91392b29239bdb2e47974cf.mp3str"
+
+[deps]
+
+source_file="res://Music/Deuces.mp3"
+dest_files=[ "res://.import/Deuces.mp3-1a203578a91392b29239bdb2e47974cf.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0

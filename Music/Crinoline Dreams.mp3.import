@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/Crinoline Dreams.mp3-b9713a24cbbaaed83bd8d699fa936731.mp3str"
+
+[deps]
+
+source_file="res://Music/Crinoline Dreams.mp3"
+dest_files=[ "res://.import/Crinoline Dreams.mp3-b9713a24cbbaaed83bd8d699fa936731.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0

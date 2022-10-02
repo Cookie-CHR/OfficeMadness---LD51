@@ -1,0 +1,31 @@
+extends Node2D
+
+
+# Declare member variables here. Examples:
+# var a = 2
+# var b = "text"
+var w_file = preload("res://Sprites/Wrong_file.png")
+var r_file = preload("res://Sprites/Chosen_file.png")
+
+
+# Called when the node enters the scene tree for the first time.
+func _ready():
+	var count_files = 28
+	for i in range(count_files):
+		var button = TextureButton.new()
+		
+		add_child(button)
+		button.set_position(Vector2((i%7)*90+35, (i/7)*82+160))
+		button.texture_normal = w_file
+		button.name = str(i)
+		
+
+	
+	var chosen_n = randi()%count_files
+	var chosen_button = get_node(str(chosen_n))
+	chosen_button.texture_normal = r_file
+
+	chosen_button.connect("pressed", self, "on_chosen_found")
+
+func on_chosen_found():
+	MManager.on_finished()
