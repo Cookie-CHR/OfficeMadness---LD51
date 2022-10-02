@@ -19,6 +19,7 @@ config/icon="res://icon.png"
 MManager="*res://Scripts/M_manager.gd"
 MusicPlayer="*res://Music/MusicPlayer.tscn"
 Muter="*res://Music/Muter.gd"
+GlobalTimer="*res://Scripts/Timer.tscn"
 
 [input]
 

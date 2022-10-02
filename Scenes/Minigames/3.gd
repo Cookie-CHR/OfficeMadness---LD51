@@ -12,12 +12,14 @@ var count_viruses = 0
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	var count_files = 40
+	var rows = min(4+int(0.02*GlobalTimer.seconds_passed), 5)
+	var columns = min(7+int(0.15*GlobalTimer.seconds_passed), 8)
+	var count_files = rows*columns
 	for i in range(count_files):
 		var button = TextureButton.new()
 		
 		add_child(button)
-		button.set_position(Vector2((i%8)*80+35, (i/8)*75+140))
+		button.set_position(Vector2((i%columns)*80+35*(9-columns), (i/columns)*75+140))
 		var r = randi()%5
 		if r<=1:
 			button.texture_normal = virus

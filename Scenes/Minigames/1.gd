@@ -10,12 +10,14 @@ var r_file = preload("res://Sprites/Chosen_file.png")
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	var count_files = 28
+	var rows = min(3+int(0.02*GlobalTimer.seconds_passed), 4)
+	var columns = min(6+int(0.15*GlobalTimer.seconds_passed), 7)
+	var count_files = rows*columns
 	for i in range(count_files):
 		var button = TextureButton.new()
 		
 		add_child(button)
-		button.set_position(Vector2((i%7)*90+35, (i/7)*82+160))
+		button.set_position(Vector2((i%columns)*90+35*(8-columns), (i/columns)*82+160))
 		button.texture_normal = w_file
 		button.name = str(i)
 		

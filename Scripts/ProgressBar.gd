@@ -5,7 +5,7 @@ var finished = false
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	value = 0
-	max_value = 200
+	max_value = 200 + 0.2*GlobalTimer.seconds_passed
 
 func _process(delta):
 	if not finished:
@@ -13,7 +13,7 @@ func _process(delta):
 			finished = true
 			MManager.on_finished()
 		else:
-			self.value -= delta*20
+			self.value -= (delta+0.0001*GlobalTimer.seconds_passed)*20
 
 func boost():
 	value +=10

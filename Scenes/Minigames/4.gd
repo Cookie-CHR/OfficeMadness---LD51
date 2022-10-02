@@ -9,7 +9,7 @@ var ascii_letters_and_digits = "abcdefghijkmnpqrstuvwxyzABCDEFGHJKLMNPQRSTUVWXYZ
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	password = gen_unique_str(10)
+	password = gen_unique_str(floor(8+0.02*GlobalTimer.seconds_passed))
 	get_node("Label").text = password
 	pass # Replace with function body.
 
