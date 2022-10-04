@@ -18,6 +18,7 @@ func _ready():
 		elif child.name=="SpawnPoint":
 			MManager.reset_spawnpoint(child)
 	randomize()
+	GlobalTimer._play()
 	_on_Timer_timeout()
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.

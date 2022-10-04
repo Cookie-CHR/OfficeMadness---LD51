@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=2]
+[gd_scene load_steps=12 format=2]
 
 [ext_resource path="res://Scripts/Play.gd" type="Script" id=1]
 [ext_resource path="res://Sprites/Play_again_button.png" type="Texture" id=2]
@@ -8,14 +8,14 @@
 [ext_resource path="res://Music/Music_Changer.gd" type="Script" id=6]
 [ext_resource path="res://Sprites/Music_On.png" type="Texture" id=7]
 [ext_resource path="res://Fonts/Life is goofy.ttf" type="DynamicFontData" id=8]
+[ext_resource path="res://Scripts/Time_Display.gd" type="Script" id=9]
 
 [sub_resource type="DynamicFont" id=1]
 size = 80
 font_data = ExtResource( 4 )
 
 [sub_resource type="DynamicFont" id=2]
-size = 35
-outline_color = Color( 0, 0, 0, 1 )
+size = 90
 font_data = ExtResource( 8 )
 
 [node name="Panel" type="Panel"]
@@ -67,21 +67,11 @@ flat = true
 
 [node name="Label2" type="Label" parent="."]
 modulate = Color( 0, 0, 0, 1 )
-margin_left = 302.0
-margin_top = 160.0
-margin_right = 681.0
-margin_bottom = 577.0
+margin_left = 297.0
+margin_top = 308.0
+margin_right = 993.0
+margin_bottom = 368.0
 custom_fonts/font = SubResource( 2 )
-text = "Music by Kevin Macleod (incompetech.com)
-Sound by FreeSound
-
-
-
-
-
-
-
-
-
-
-Made by Cookie-CHR for Ludum Dare 51"
+text = "60 minutes and 60 seconds"
+align = 1
+script = ExtResource( 9 )

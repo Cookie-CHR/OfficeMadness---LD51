@@ -5,6 +5,7 @@ var muted = preload("res://Sprites/Music_Off.png")
 var unmuted = preload("res://Sprites/Music_On.png")
 # Called when the node enters the scene tree for the first time.
 func _ready():
+	GlobalTimer._stop()
 	for child in get_children():
 		if child.name == "Play":
 			child.connect("pressed", self, "_play")

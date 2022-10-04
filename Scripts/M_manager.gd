@@ -42,7 +42,7 @@ func on_finished():
 	var sprite = Sprite.new()
 	sprite.texture = completed
 	spawnpoint.add_child(sprite)
-	sprite.position = Vector2(348, 320)
+	sprite.position = Vector2(300, 270)
 	var sound = audiostream.instance()
 	spawnpoint.add_child(sound)
 	sound._play("victory")
